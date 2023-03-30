@@ -37,7 +37,7 @@ earlystop_callback = EarlyStopping(
 history = model.fit(
     train_generator,
     steps_per_epoch=train_generator.samples / train_generator.batch_size,
-    epochs=10,
+    epochs=1,
     verbose=1,
     callbacks=[earlystop_callback])
 model.save('classifier.h5')
